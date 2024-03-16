@@ -27,6 +27,8 @@ namespace PostLand.Api.Controllers
         public async Task<ActionResult<List<GetPostListViewModel>>> GetAllPosts()
         {
             var dtos = await _mediator.Send(new GetPostListQuery());
+
+         
             return Ok(dtos);
         }
 
